@@ -17,7 +17,7 @@ def maximum(time):
     print(f'Slowest Time: {int(m_max)} {"minute" if m_max<=1 else "minutes"}, {int(s_max)} {"second" if s_max<=1 else "seconds"}')
 def winner(time, runner):
     '''Determines Winner'''
-    index=time.index(min(time)) 
+    index=time.index(min(time)) #determining the winner
     print(f'\nBest Time Here: Runner #{runner[index]}')
 def main():
     print("Park Run Timer\n~~~~~~~~~~~~~~\n\nLet's go!")
@@ -46,4 +46,4 @@ def main():
         except: 
             print("Error in data stream. Ignorning. Carry on.")
 if __name__ == '__main__':
-  main()
+  main() #calling the main funtion

@@ -37,9 +37,10 @@ def main():
         try: 
             int(split_entry[0]) 
             int(split_entry[1]) 
-            if split_entry[0] in runner: 
+            i = int(split_entry[0])
+            if i in runner:
                 print("Runner is already registered! Ignorning. Carry on.")
-            else: 
+            else:
                 runner.append(int(split_entry[0])) 
                 time.append(int(split_entry[1])) 
         except: 

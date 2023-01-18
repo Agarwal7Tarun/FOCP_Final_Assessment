@@ -4,7 +4,8 @@ if len(sys.argv) < 2:
     print("Usage: caesar_cracker.py <encrypted_message_file>")
     sys.exit(1)
 filename = sys.argv[1]
-validate= "the"
+validate1= " the "
+validate2= " is "
 try:
     with open(filename, "r") as f:
         encrypted_message = f.read()
@@ -22,8 +23,8 @@ for shift in range(26):
                 decrypted_message += chr((ord(ch) - ord("a") + shift) % 26 + ord("a"))
         else:
             decrypted_message += ch
-    if validate in decrypted_message:
-        print("\nPossibility {} Shift {}: {}".format(possibility, shift, decrypted_message))
+    if validate1 in decrypted_message or validate2 in decrypted_message:
+        print("\nPossibility {} Shift {}: {}\n".format(possibility, shift, decrypted_message))
         possibility+=1
     else:
         pass
